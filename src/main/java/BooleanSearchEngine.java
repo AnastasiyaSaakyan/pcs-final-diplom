@@ -26,8 +26,8 @@ public class BooleanSearchEngine implements SearchEngine {
         return stopWords;
     }
 
-    public void indexingStopWords(String stopWordsFileName) throws Exception {
-        BufferedReader reader = new BufferedReader(new FileReader(stopWordsFileName));
+    public void indexingStopWords(String stopWordsNameFile) throws Exception {
+        BufferedReader reader = new BufferedReader(new FileReader(stopWordsNameFile));
         while (reader.ready()) {
             stopWords.add(reader.readLine().toLowerCase());
         }
